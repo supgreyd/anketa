@@ -1,0 +1,12 @@
+mixin about()
+	+b.about&attributes(attributes)
+		block
+
+section.about
+	h2.section__about_title Расскажите о себе словами
+	p.section__about_text Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+	textarea.about__textarea#textarea
+
+script
+	include about.js
+

@@ -1,0 +1,51 @@
+.plans
+	display block
+	margin-bottom: 105px
+
+	.section__plans_title
+		title()
+
+	.section__plans_text
+		text()
+
+	.plans__list
+		font-size: 21px
+		font-weight: 700
+
+		.plans__list_item
+			padding-left: 10px
+			padding-right: 20px
+			position: relative
+			display: inline-block
+
+	.radio
+		vertical-align: top
+		margin-right: 3px
+		width: 20px
+		height: 20px
+
+		&+ label
+			cursor: pointer
+			display: block
+
+		&:not(checked)
+			position: absolute
+			opacity: 0
+
+		&:not(checked) + label
+			padding-left: 20px
+
+			&:before
+				content: ''
+				sprite $radio_btn
+				position: absolute
+				top: -2px
+				left: 0
+
+
+		&:checked + label:after
+			content: ''
+			sprite $radio_active
+			position: absolute
+			left: 7px
+			top: 5px

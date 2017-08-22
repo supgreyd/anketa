@@ -1,0 +1,52 @@
+.info
+	display block
+	margin-bottom: 75px
+
+	.info__logo
+		sprite $logo
+
+	.info__title
+		sprite $delo
+		margin-y(60px)
+		margin-left: 260px
+
+	.info__stamp
+		sprite $stamp
+		position: absolute
+		right: 55px
+		top: 50px
+
+	.info__list
+		padding-top: 15px
+		overflow-x: hidden
+
+		.info__list_element
+			font-size: 22.43px
+			margin-bottom: 50px
+			font-weight: 700
+			color brown
+
+			&:last-child
+				margin-bottom: 0
+
+			.info__list_element-text
+				font-size: 30px
+				display: inline-block
+				position: relative
+				padding-left: 15px
+				transform: translateY(-15px)
+				font-family 'Courier'
+				color inputColor
+				font-weight: 400
+
+				&:after
+					content ''
+					display: inline-block
+					sprite $border
+					position: absolute
+					bottom: -15px
+					left: 0
+
+
+
+

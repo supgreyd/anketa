@@ -1,0 +1,34 @@
+.date
+	display block
+
+	.date__fill_date
+		font-size: 22.43px
+		font-weight: 700
+		color brown
+		display: inline-block
+
+	.date__fill_date-input
+		display: inline-block
+		position: relative
+		transform: translateY(-20px)
+		overflow hidden
+		padding-bottom: 15px
+		padding-left: 15px
+		vertical-align: top
+
+		&:before
+			sprite $border
+			position absolute
+			content ''
+			bottom: 8px
+
+		input
+			font-size 30px
+			margin-left 15px
+			font-family 'Courier'
+			color inputColor
+			background transparent
+			border none
+			max-width 200px
+
+

@@ -1,0 +1,56 @@
+.skills
+	display block
+	font-size: 0
+	margin-bottom: 65px
+
+	.section__skills_title
+		title()
+
+	.section__skills_text
+		text()
+
+	.skills_list
+		width: 33%
+		display: inline-block
+		vertical-align: top
+		font-size: 21px
+		font-weight: 700
+
+		.skills__list_item
+			padding-y(10px)
+			padding-left: 10px
+			position: relative
+
+		.checkbox
+			vertical-align: top
+			margin-right: 3px
+			width: 20px
+			height: 20px
+
+			&+ label
+				cursor: pointer
+				display: block
+
+			&:not(checked)
+				position: absolute
+				opacity: 0
+
+			&:not(checked) + label
+				padding-left: 20px
+
+				&:before
+					content: ''
+					sprite $checkbox
+					position: absolute
+					top: 12px
+					left: 0
+
+
+			&:checked + label:after
+				content: ''
+				sprite $checked
+				position: absolute
+				left: 4px
+				top: 2px
+
+

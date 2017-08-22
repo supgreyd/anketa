@@ -1,0 +1,63 @@
+.skillsJs
+	display block
+	margin-bottom: 100px
+
+	.section__skillsJs_title
+		title()
+		margin-bottom: 45px
+
+	.skillsJs__range
+		display: block
+		position: relative
+		width: 100%
+		sprite $border
+
+		.skillsJs__range_slider
+			display: block
+			position: absolute
+			sprite $slider
+			top: -15px
+
+		.skillsJs__level
+			position: absolute
+			font-size: 13px
+			color: brown
+			font-weight: 700
+			width: 100%
+			top: 2px
+
+			li
+				position: absolute
+				max-width: 25%
+
+				&:before
+					display: block
+					content: ''
+					width: 2px
+					height: 20px
+					background-color: brown
+					margin-bottom: 10px
+
+				&:nth-child(2)
+					left: 20%
+
+					&:before
+						height: 10px
+						margin-bottom: 20px
+
+				&:nth-child(3)
+					left: 50%
+
+					&:before
+						height: 10px
+						margin-bottom: 20px
+
+				&:nth-child(4)
+					right: 0
+
+					&:before
+						margin-left: 100%
+
+
+
+
