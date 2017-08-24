@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="imagetoolbar" content="no">
+		<meta name="msthemecompatible" content="no">
+		<meta name="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="google" value="notranslate">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link sizes="57x57" href="/apple-touch-icon-57x57.png" rel="apple-touch-icon">
+		<link sizes="114x114" href="/apple-touch-icon-114x114.png" rel="apple-touch-icon">
+		<link sizes="72x72" href="/apple-touch-icon-72x72.png" rel="apple-touch-icon">
+		<link sizes="144x144" href="/apple-touch-icon-144x144.png" rel="apple-touch-icon">
+		<link sizes="60x60" href="/apple-touch-icon-60x60.png" rel="apple-touch-icon">
+		<link sizes="120x120" href="/apple-touch-icon-120x120.png" rel="apple-touch-icon">
+		<link sizes="76x76" href="/apple-touch-icon-76x76.png" rel="apple-touch-icon">
+		<link sizes="152x152" href="/apple-touch-icon-152x152.png" rel="apple-touch-icon">
+		<link sizes="180x180" href="/apple-touch-icon-180x180.png" rel="apple-touch-icon">
+		<link sizes="192x192" href="/favicon-192x192.png" rel="icon" type="image/png">
+		<link sizes="160x160" href="/favicon-160x160.png" rel="icon" type="image/png">
+		<link sizes="96x96" href="/favicon-96x96.png" rel="icon" type="image/png">
+		<link sizes="16x16" href="/favicon-16x16.png" rel="icon" type="image/png">
+		<link sizes="32x32" href="/favicon-32x32.png" rel="icon" type="image/png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="application-name" content="">
+		<meta name="msapplication-tooltip" content="">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/mstile-large.png">
+		<meta name="msapplication-starturl" content="https://csssr.github.io/csssr-project-template/">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="msapplication-square70x70logo" content="/mstile-small.png">
+		<meta name="msapplication-square150x150logo" content="/mstile-medium.png">
+		<meta name="msapplication-wide310x150logo" content="/mstile-wide.png">
+		<meta name="msapplication-square310x310logo" content="/mstile-large.png">
+		<title>CSSSR Project Template</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="/assets/styles/app.min.css?v=d11a208" rel="stylesheet">
+	</head>
+
+	<body class="page">
+		<div class="container">
+			<section class="info">
+				<div class="info__logo"></div>
+				<div class="info__title"></div>
+				<div class="info__stamp"></div>
+				<ul class="info__list">
+					<li class="info__list_element">
+						<label for="name">Полное ФИО</label>
+						<span class="info__list_element-text">
+							<input id="name" tabindex="0" type="text" value="Божик Константин Викторович">
+						</span>
+					</li>
+					<li class="info__list_element">
+						<label for="birth">Год рождения</label>
+						<span class="info__list_element-text">
+							<input id="birth" type="text" value="1991">
+						</span>
+					</li>
+					<li class="info__list_element">
+						<label for="country">Место жтьельства</label>
+						<span class="info__list_element-text">
+							<input id="country" type="text" value="г. Одесса, Украина">
+						</span>
+					</li>
+					<li class="info__list_element">
+						<label for="skype">Скайп</label>
+						<span class="info__list_element-text">
+							<input id="skype" type="text" value="uu53790">
+						</span>
+					</li>
+					<li class="info__list_element">
+						<label for="mail">Почта</label>
+						<span class="info__list_element-text">
+							<input id="mail" type="text" value="supgreyd@gmail.com">
+						</span>
+					</li>
+				</ul>
+			</section>
+			<script>
+				let obj = document.getElementById("name");
+				let el = obj.value;
+
+				obj.addEventListener("blur", function()
+				{
+					el = this.value
+				})
+
+
+
+				function fio()
+				{
+
+					let arr = el.split(' ')
+					arr[1] = arr[1][0] + '.'
+					arr[2] = arr[2][0] + '.'
+					let width = window.innerWidth;
+					if (width < 500)
+					{
+						obj.value = arr.join(" ");
+					}
+					else if (width > 500)
+					{
+						obj.value = el;
+					}
+				}
+
+				(function()
+				{
+
+					fio()
+
+				})()
+
+				window.onresize = fio
+
+			</script>
+			<section class="skills">
+				<h2 class="section__skills_title">Расскажите о себе чекбоксами</h2>
+				<p class="section__skills_text">Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше
+					шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете
+					справляться.</p>
+				<div class="skills__list_wrap">
+					<ul class="skills_list">
+						<li class="skills__list_item">
+							<input id="bem" type="checkbox" checked class="checkbox">
+							<label for="bem">БЭМ/OOCSS</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="pug" type="checkbox" checked class="checkbox">
+							<label for="pug">Pug (Jade)</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="preprocessor" type="checkbox" checked class="checkbox">
+							<label for="preprocessor">Stylus/LESS/SASS</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="svg" type="checkbox" checked class="checkbox">
+							<label for="svg">Работаю с SVG</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="semantic" type="checkbox" checked class="checkbox">
+							<label for="semantic">Верстаю семантично</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="ally" type="checkbox" class="checkbox">
+							<label for="ally">Accessibility (A11Y)</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="es" type="checkbox" class="checkbox">
+							<label for="es">ES2015/ES2016</label>
+						</li>
+					</ul>
+					<ul class="skills_list">
+						<li class="skills__list_item">
+							<input id="gulp" type="checkbox" checked class="checkbox">
+							<label for="gulp">Gulp/GRUNT</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="webpack" type="checkbox" checked class="checkbox">
+							<label for="webpack">Webpack</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="webgl" type="checkbox" class="checkbox">
+							<label for="webgl">Дружу с WebGL</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="jQuery" type="checkbox" checked class="checkbox">
+							<label for="jQuery">jQuery</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="angular" type="checkbox" class="checkbox">
+							<label for="angular">Знаю/изучаю Angular</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="react" type="checkbox" class="checkbox">
+							<label for="react">Знаю/изучаю React</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="node" type="checkbox" checked class="checkbox">
+							<label for="node">Знаю/изучаю Node.js</label>
+						</li>
+					</ul>
+					<ul class="skills_list">
+						<li class="skills__list_item">
+							<input id="git" type="checkbox" checked class="checkbox">
+							<label for="git">Использую Git</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="eyes" type="checkbox" checked class="checkbox">
+							<label for="eyes">С глазомером всё ок</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="blog" type="checkbox" checked class="checkbox">
+							<label for="blog">Читаю blog.csssr.ru</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="lazy" type="checkbox" class="checkbox">
+							<label for="lazy">Я ленивый(-ая)</label>
+						</li>
+						<li class="skills__list_item">
+							<input id="english" type="checkbox" checked class="checkbox">
+							<label for="english">У меня хороший английский</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="skillsJs">
+				<h2 class="section__skillsJs_title">Уровень владения JavaScript</h2>
+				<div class="skillsJs__horizontal">
+					<div id="slider" class="skillsJs__range">
+						<div class="skillsJs__range_slider"></div>
+						<ul class="skillsJs__level">
+							<li>
+								<span>Не владею</span>
+							</li>
+							<li>
+								<span>Использую готовые решения</span>
+							</li>
+							<li>
+								<span>Использую готовые решения и умею их переделывать</span>
+							</li>
+							<li>
+								<span>Пишу сложный JS с нуля</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<script>
+				let thumb = slider.firstElementChild;
+
+				thumb.onmousedown = function(e)
+				{
+
+					let shiftX = e.pageX - getCoords(thumb).left;
+					let sliderCoords = getCoords(slider);
+					let thumbStyle = thumb.style;
+
+					changeAtMove(e);
+
+					function changeAtMove(e)
+					{
+						if ((e.pageX - shiftX) < sliderCoords.left)
+						{
+							thumbStyle.left = -6 + 'px';
+						}
+						else if ((e.pageX - shiftX + thumb.offsetWidth) > sliderCoords.right)
+						{
+							thumbStyle.left = slider.offsetWidth - thumb.offsetWidth + 6 + 'px';
+						}
+						else
+						{
+							thumbStyle.left = e.pageX - sliderCoords.left - shiftX + 'px';
+						}
+					}
+
+					document.onmousemove = function(e)
+					{
+						changeAtMove(e);
+					}
+
+					document.onmouseup = thumb.onmouseup = function()
+					{
+						document.onmousemove = document.onmouseup = null;
+					}
+					return false;
+				};
+
+				thumb.ondragstart = function()
+				{
+					return false;
+				}
+
+				function getCoords(elem)
+				{
+					let box = elem.getBoundingClientRect();
+					return {
+						top: box.top + pageYOffset,
+						left: box.left + pageXOffset,
+						right: box.right + pageXOffset
+					};
+				}
+
+			</script>
+			<section class="about">
+				<h2 class="section__about_title">Расскажите о себе словами</h2>
+				<p class="section__about_text">Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово,
+					если при нехватке места для текста строки будут добавляться автоматически.</p>
+				<textarea id="textarea" class="about__textarea">Я в поисках постоянной роботы, слышал вы делаете крутые проекты, хотелось бы стать частью Вашей комманды</textarea>
+			</section>
+			<script>
+				function autosize(elem)
+				{
+					const el = elem.target || elem
+					setTimeout(function()
+					{
+						el.style.cssText = 'height:auto; padding:0';
+						el.style.cssText = 'height:' + el.scrollHeight + 'px';
+					}, 0);
+				}
+
+				(function()
+				{
+					const textarea = document.getElementById('textarea');
+					autosize(textarea);
+					textarea.addEventListener('keydown', autosize);
+				})();
+
+			</script>
+			<section class="plans">
+				<h2 class="section__plans_title">Какие у вас планы на будущее?</h2>
+				<p class="section__plans_text">Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.</p>
+				<ul class="plans__list">
+					<li class="plans__list_item">
+						<input id="html" type="radio" name="plans" class="radio">
+						<label for="html">Верстать</label>
+					</li>
+					<li class="plans__list_item">
+						<input id="js" type="radio" name="plans" checked class="radio">
+						<label for="js">Прокачиваться в JS</label>
+					</li>
+					<li class="plans__list_item">
+						<input id="manage" type="radio" name="plans" class="radio">
+						<label for="manage">Менеджерство</label>
+					</li>
+					<li class="plans__list_item">
+						<input id="other" type="radio" name="plans" class="radio">
+						<label for="other">Другое</label>
+					</li>
+				</ul>
+			</section>
+			<section class="date">
+				<label for="date" class="date__fill_date">Дата заполнения</label>
+				<div class="date__fill_date-input">
+					<input id="date" type="text" value="24.08.2017" maxlength="10">
+				</div>
+			</section>
+		</div>
+		<script src="/assets/scripts/app.min.js?v=be1c9a7"></script>
+	</body>
+
+</html>
