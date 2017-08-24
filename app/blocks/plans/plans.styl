@@ -1,22 +1,32 @@
 .plans
 	display block
-	margin-bottom: 105px
+	margin-bottom: 95px
 
 	.section__plans_title
 		title()
 
 	.section__plans_text
 		text()
+		margin-bottom: 17px
 
 	.plans__list
-		font-size: 21px
-		font-weight: 700
+		radio()
 
 		.plans__list_item
 			padding-left: 10px
-			padding-right: 20px
+			padding-right: 15px
+			padding-bottom 10px
 			position: relative
 			display: inline-block
+			letter-spacing: -0.2px
+
+		@media screen and (max-width: 972px)
+			.plans__list_item
+				width: 49%
+
+		@media screen and (max-width: 500px)
+			.plans__list_item
+				width: 100%
 
 	.radio
 		vertical-align: top

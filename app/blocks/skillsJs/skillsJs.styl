@@ -1,15 +1,18 @@
 .skillsJs
 	display block
-	margin-bottom: 100px
+	margin-bottom: 90px
 
 	.section__skillsJs_title
 		title()
-		margin-bottom: 45px
+		margin-bottom: 42px
+
+	.skillsJs__vertical
+		display: none
 
 	.skillsJs__range
 		display: block
 		position: relative
-		width: 100%
+		max-width: 100%
 		sprite $border
 
 		.skillsJs__range_slider
@@ -17,6 +20,8 @@
 			position: absolute
 			sprite $slider
 			top: -15px
+			cursor: pointer
+			left: 35%
 
 		.skillsJs__level
 			position: absolute
@@ -24,40 +29,83 @@
 			color: brown
 			font-weight: 700
 			width: 100%
-			top: 2px
+			top: 3px
 
 			li
 				position: absolute
-				max-width: 25%
+				max-width: 175px
+				line-height: 18px
 
 				&:before
 					display: block
 					content: ''
 					width: 2px
-					height: 20px
+					height: 25px
 					background-color: brown
-					margin-bottom: 10px
+					margin-bottom: 4px
+					margin-left: 1px
 
 				&:nth-child(2)
-					left: 20%
+					left: 19%
 
 					&:before
+						margin-left: 4px
 						height: 10px
-						margin-bottom: 20px
+						margin-bottom: 18px
 
 				&:nth-child(3)
-					left: 50%
+					left 50%
+					margin-right: 2px
 
 					&:before
 						height: 10px
-						margin-bottom: 20px
+						margin-bottom: 18px
 
 				&:nth-child(4)
 					right: 0
 
 					&:before
-						margin-left: 100%
+						margin-left: 99%
+						margin-bottom: 10px
 
+@media screen and (max-width: 750px)
+	.skillsJs
+		height: 300px
 
+		.skillsJs__horizontal
+			display: none
 
+		.skillsJs__vertical
+			display: block
+			transform: rotate(-90deg) translateX(-45%)
+			width: 300px
+			position: relative
+			right: 100px
 
+		.skillsJs__level
+			li
+				span
+					display: block
+					transform: rotate(90deg)
+					position: relative
+					font-size: 16px
+
+			li:nth-child(1)
+				span
+					right: 34px;
+					top: 36px;
+
+			li:nth-child(2)
+				span
+					right: 74px;
+					top: 64px;
+
+			li:nth-child(3)
+				span
+					right: 68px;
+					top: 38px;
+
+			li:nth-child(4)
+				span
+					right: -82px;
+					top: 72px;

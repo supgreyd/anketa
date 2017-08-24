@@ -1,24 +1,33 @@
 .skills
 	display block
 	font-size: 0
-	margin-bottom: 65px
+	margin-bottom: 50px
 
 	.section__skills_title
 		title()
 
 	.section__skills_text
 		text()
+		letter-spacing: -0.1px
 
 	.skills_list
-		width: 33%
 		display: inline-block
 		vertical-align: top
-		font-size: 21px
-		font-weight: 700
+		radio()
+
+		&:nth-child(1)
+			width 256px
+
+		&:nth-child(2)
+			width 270px
+
+		&:nth-child(3)
+			width 220px
 
 		.skills__list_item
-			padding-y(10px)
-			padding-left: 10px
+			padding-bottom: 11px
+			line-height: 24px
+			padding-left: 8px
 			position: relative
 
 		.checkbox
@@ -42,7 +51,7 @@
 					content: ''
 					sprite $checkbox
 					position: absolute
-					top: 12px
+					top: 3px
 					left: 0
 
 
@@ -51,6 +60,12 @@
 				sprite $checked
 				position: absolute
 				left: 4px
-				top: 2px
+				top: -5px
 
+	@media screen and (max-width: 972px)
+		.skills_list:nth-child(n)
+			width: 50%
 
+	@media screen and (max-width: 500px)
+		.skills_list:nth-child(n)
+			width: 100%
